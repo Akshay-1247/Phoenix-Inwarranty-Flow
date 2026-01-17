@@ -32,7 +32,7 @@ jobs:
              -e QA.postman_environment.json \
              -d testData2.csv \
              -r cli,htmlextra \
-             --reporter-htmlextra-export "newman/*.html"
+             --reporter-htmlextra-export "newman/test.html"
 
       - name: Newman Report
         if: always()
