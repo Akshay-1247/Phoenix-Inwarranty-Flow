@@ -31,7 +31,13 @@ jobs:
              newman run DataDrivenInwarranty.json \
              -e QA.postman_environment.json \
              -d testData2.csv \
-             -r cli,htmlextra \
+             -r cli,htmlextra
+
+      - name: Newman Report
+        uses: actions/upload-artifact@v6.0.0
+        with:
+          name: Newman Report
+          path: newman/*.html
     
     
   
